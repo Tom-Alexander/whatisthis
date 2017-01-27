@@ -6,7 +6,7 @@ def readme():
 
 setup(name='whatisthis',
       version='0.0.1',
-      description='',
+      description='UI for manual image classification',
       long_description=readme(),
       url='http://github.com/Tom-Alexander/whatisthis',
       download_url = 'https://github.com/Tom-Alexander/whatisthis/tarball/0.0.1',
