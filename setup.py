@@ -1,11 +1,11 @@
-from distutils.core import setup
+from setuptools import setup
 
 def readme():
     with open('README.rst') as f:
         return f.read()
 
 setup(name='whatisthis',
-      version='0.0.1',
+      version='0.0.2',
       description='UI for manual image classification',
       long_description=readme(),
       url='http://github.com/Tom-Alexander/whatisthis',
