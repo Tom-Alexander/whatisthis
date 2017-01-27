@@ -1,3 +1,4 @@
+import os
 from jinja2 import Template
 from mimetypes import MimeTypes
 from urllib.parse import urlparse, parse_qs
@@ -34,7 +35,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             previous = int(parameters['prev'][0])
             index = (previous + 1) % len(self.images)
             previous_path = self.images[index]
-            self.emitter(previous, tag)
+            self.emitter(previous_path, tag)
         else:
             previous_path = self.images[0]
         try:
@@ -51,6 +52,9 @@ class RequestHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         request = urlparse(self.path)
+
         if 'image' in request.path:
             return self.handle_image_service(request)
-        self.send_file(request, 'index.html')
+
+        index = os.path.join(os.path.dirname(__file__), 'index.html')
+        self.send_file(request, index)
