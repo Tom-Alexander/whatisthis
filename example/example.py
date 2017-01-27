@@ -1,4 +1,4 @@
-from whatisthis import create_server
+from whatisthis import server
 
 def emitter(image, tag):
     print(image, tag)
@@ -6,7 +6,7 @@ def emitter(image, tag):
 images = ['../data/img_001.jpg', '../data/img_002.jpg', '../data/img_003.jpg']
 categories = ['cat', 'dog']
 
-create_server(
+server.create(
     emitter=emitter,
     images=images,
     categories=categories)
