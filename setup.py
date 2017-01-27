@@ -9,10 +9,13 @@ setup(name='whatisthis',
       description='',
       long_description=readme(),
       url='http://github.com/Tom-Alexander/whatisthis',
-      download_url = 'https://github.com/peterldowns/mypackage/tarball/0.0.1',
+      download_url = 'https://github.com/Tom-Alexander/whatisthis/tarball/0.0.1',
       author='Tom Alexander',
       author_email='me@tomalexander.co.nz',
       license='MIT',
       packages=['whatisthis'],
       include_package_data=True,
-      zip_safe=False)
+      zip_safe=False,
+      install_requires=[
+        'jinja2'
+      ])
